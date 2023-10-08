@@ -8,10 +8,9 @@ $auth = new Auth();
         //mandamos llamar de la clse auth, lo que es el id
         $userID = $auth->getUserId();
         // nos enlazamos a perfil, para despues poder tomar el valor del id de la sesion, que esta en auth
-        
     $cursos = $mostrarComprados->mostrarCursos($userID); // Obtiene la lista de cursos
  
     }else{
  
-    }
+    } 
 ?>  

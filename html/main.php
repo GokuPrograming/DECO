@@ -2,6 +2,7 @@
 // Incluye el archivo mostrar_cursos.php
 include '../Controladores/crlMostrar.php';
 include '../Controladores/ctlFavoritos.php';
+include '../Controladores/ctlCarrito.php';
 ?>
 <!DOCTYPE html>
 <html lang="en" class="backblavk">
@@ -143,8 +144,9 @@ include '../Controladores/ctlFavoritos.php';
     </section>
 
 
-    <?php include '../Controladores/ctlMostrarFav.php'; ?>
+
     <section class="secao_lista_filmes">
+        <?php include '../Controladores/ctlMostrarFav.php'; ?>
         <div class="container">
             <h2>los favoritos</h2>
             <ul class="em_alta">
@@ -171,42 +173,68 @@ include '../Controladores/ctlFavoritos.php';
             </ul>
         </div>
     </section>
+    <?php include '../Controladores/ctlCarrito.php'; ?>
+    <section class="secao_lista_filmes">
+        <div class="container">
 
-
+            <h2>los del carrito</h2>
+            <ul class="em_alta">
+                <?php foreach ($usuariosCarrito as $curso) : ?>
+                    <li>
+                        <figure>
+                            <img class="" src="../assets/img/<?php echo $curso['imagen']; ?>" width="100" alt="<?php echo $curso['titulo']; ?>">
+                            <figcaption class=""><?php echo $curso['titulo']; ?></figcaption>
+                            <div>
+                                <form action="" method="post">
+                                    <button class="boton_favorito">Favorito</button>
+                                    <a href="../Controladores/ctlcompras.php?id=<?php echo $curso['id_lista_cursos']; ?>">Comprar</a>
+                                </form>
+                            </div>
+                        </figure>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
+        </div>
+    </section>
 
 
 
     <section class="secao_lista_filmes">
         <div class="container">
-            <h2>favoritos</h2>
-            <ul class="continuar_assistindo">
-                <li>
-                    <figure>
-                        <img src="https://i.postimg.cc/NF88YGfn/THE-WITCHER.png" alt="THE WITCHER">
-                        <figcaption>Filme 1</figcaption>
-                    </figure>
-                </li>
-                <li>
-                    <figure>
-                        <img src="https://i.postimg.cc/bJ9dwZk1/THE-WALKING-DEAD.png" alt="THE WALKING DEAD">
-                        <figcaption>Filme 2</figcaption>
-                    </figure>
-                </li>
-                <li>
-                    <figure>
-                        <img src="https://i.postimg.cc/PxXTK2v8/O-RESGATE-DO-SOLDADO-RYAN.png" alt="O RESGATE DO SOLDADO RYAN">
-                        <figcaption>Filme 3</figcaption>
-                    </figure>
-                </li>
-                <li>
-                    <figure>
-                        <img src="https://i.postimg.cc/J7JCJf2d/DAWSON-S-CREEK.png" alt="DAWSON'S CREEK">
-                        <figcaption>Filme 4</figcaption>
-                    </figure>
-                </li>
+            <a href="../html/carrito.php">ir a carrito</a>
+            <?php include '../Controladores/ctlCarrito.php'; ?>
+            <h2>los del carrito</h2>
+            <ul class="em_alta">
+
+                <?php foreach ($cursos as $curso) : ?>
+                    <li>
+                        <figure>
+                            <img class="" src="../assets/img/<?php echo $curso['imagen']; ?>" width="100" alt="<?php echo $curso['titulo']; ?>">
+
+                            <figcaption class=""><?php echo $curso['titulo']; ?></figcaption>
+
+                            <div>
+                                <form action="" method="post">
+                                    <button class="boton_favorito">Favorito</button>
+                                    <a href="../Controladores/ctlcompras.php?id=<?php echo $curso['id_lista_cursos']; ?>">Comprar</a>
+
+                                </form>
+
+                            </div>
+                        </figure>
+                    </li>
+                <?php endforeach; ?>
             </ul>
         </div>
     </section>
+
+
+
+
+
+
+
+
     <section class="secao_lista_filmes">
         <div class="container">
             <h2>CONTINUAR ASSISTINDO</h2>
