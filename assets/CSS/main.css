@@ -1,0 +1,545 @@
+.backblavk {
+
+    /*background: linear-gradient(to bottom, hsl(0, 0%, 100%), rgb(12, 5, 5));
+*/
+
+    background-color: gainsboro
+}
+
+.imagen-redondeada {
+    border-radius: 50%;
+    /* Un valor del 50% hace que la imagen tenga bordes completamente redondeados, convirtiéndola en un círculo si la imagen es cuadrada. Puedes ajustar este valor según tus preferencias. */
+}
+
+
+
+section {
+    background-color: #f0f0f0;
+    /* Color de fondo */
+    padding: 20px;
+    /* Espacio interior */
+    margin: 20px;
+    /* Margen exterior */
+    border-radius: 10px;
+    /* Borde redondeado */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    /* Sombra */
+}
+
+/* Estilo cuando se pasa el ratón sobre el elemento <section> */
+section:hover {
+    transform: scale(1.05);
+    /* Escala el elemento al 105% del tamaño original */
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+    /* Sombra más pronunciada */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    /* Transiciones suaves */
+}
+
+
+/* tuitolo de video*/
+figcaption {
+    color: #000000;
+    font-size: x-large;
+    font-style: inherit;
+    margin-top: 40px;
+    text-align: center;
+    font: bold;
+
+
+}
+
+
+
+/* SEÇÃO DESTAQUE */
+.secao_destaque {
+    BACKGROUND-IMAGE: URL(https://i.postimg.cc/Sxzkj0qd/yesterday.png);
+    BACKGROUND-SIZE: COVER;
+    BACKGROUND-REPEAT: NO-REPEAT;
+    BACKGROUND-POSITION: CENTER;
+    PADDING: 30PX 0PX 30PX;
+
+}
+
+.secao_destaque_imagem_destaque {
+    DISPLAY: NONE;
+}
+
+.secao_destaque_imagem_destaque img {
+    width: 400PX;
+
+}
+
+/* TÍTULO DE DESTAQUE */
+.secao_descricao_destaque h1 {
+    DISPLAY: INLINE-BLOCK;
+    color: white;
+    font-size: 40px;
+
+
+}
+
+.secao_descricao_destaque P {
+    DISPLAY: INLINE-BLOCK;
+    color: white;
+    MARGIN: -20PX 0PX 10PX 0PC;
+    font-size: 0.95REM;
+}
+
+/* BOTÕES DE DESTAQUE */
+.secao_assistir_saiba_mais a {
+    DISPLAY: INLINE-BLOCK;
+    FONT-SIZE: 0.8REM;
+    BACKGROUND-COLOR: orange;
+    PADDING: 6PX 16PX;
+    COLOR: BLACK;
+    BORDER-RADIUS: 4PX
+}
+
+
+/* TÍTULO LISTA DE FILMES */
+.secao_lista_filmes {
+    color: #000000;
+    padding: 10px 10px;
+    MARGIN: 80PX 50PX 30PX;
+
+
+}
+
+
+/* LISTA DE FILMES EM ALTA */
+.em_alta {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    overflow-X: scroll;
+    MARGIN-TOP: 10PX;
+}
+
+
+
+.em_alta img {
+    margin-right: 80px;
+    margin-top: 40px;
+    margin-left: 40px;
+    BORDER-RADIUS: 10PX;
+}
+
+/*girar las imagenes*/
+.secao_lista_filmes figure {
+    transition: transform 0.5s ease;
+    /* Agrega una transición suave */
+
+}
+
+.secao_lista_filmes figure:hover {
+    transform: rotateY(30deg);
+    /* Aplica una rotación 3D al hacer hover */
+}
+
+
+
+/* LISTA DE FILMES CONTINUAR ASSISTINDO */
+.continuar_assistindo {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    overflow-X: scroll;
+    MARGIN-TOP: 10PX;
+
+}
+
+
+.continuar_assistindo img {
+    margin-right: 80px;
+    margin-top: 40px;
+    margin-left: 40px;
+    BORDER-RADIUS: 10PX;
+}
+
+
+.rodape_midias_sociais ul {
+    display: flex;
+    overflow: hidden;
+    overflow-X: scroll;
+
+}
+
+
+
+/*footer*/
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.footer-section {
+    background: linear-gradient(to bottom, rgb(12, 5, 5), #000000);
+    position: relative;
+}
+
+.footer-cta {
+    border-bottom: 1px solid #373636;
+}
+
+.single-cta i {
+    color: #ff5e14;
+    font-size: 30px;
+    float: left;
+    margin-top: 8px;
+}
+
+.cta-text {
+    padding-left: 15px;
+    display: inline-block;
+}
+
+.cta-text h4 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.cta-text span {
+    color: #757575;
+    font-size: 15px;
+}
+
+.footer-content {
+    position: relative;
+    z-index: 2;
+}
+
+.footer-pattern img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 330px;
+    background-size: cover;
+    background-position: 100% 100%;
+}
+
+.footer-logo {
+    margin-bottom: 30px;
+}
+
+.footer-logo img {
+    max-width: 200px;
+}
+
+.footer-text p {
+    margin-bottom: 14px;
+    font-size: 14px;
+    color: #7e7e7e;
+    line-height: 28px;
+}
+
+.footer-social-icon span {
+    color: #fff;
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 20px;
+}
+
+.footer-social-icon a {
+    color: #fff;
+    font-size: 16px;
+    margin-right: 15px;
+}
+
+.footer-social-icon i {
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    line-height: 38px;
+    border-radius: 50%;
+}
+
+.facebook-bg {
+    background: #3B5998;
+}
+
+.twitter-bg {
+    background: #55ACEE;
+}
+
+.google-bg {
+    background: #DD4B39;
+}
+
+.footer-widget-heading h3 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.footer-widget-heading h3::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+    height: 2px;
+    width: 50px;
+    background: #ff5e14;
+}
+
+.footer-widget ul li {
+    display: inline-block;
+    float: left;
+    width: 50%;
+    margin-bottom: 12px;
+}
+
+.footer-widget ul li a:hover {
+    color: #ff5e14;
+}
+
+.footer-widget ul li a {
+    color: #878787;
+    text-transform: capitalize;
+}
+
+.subscribe-form {
+    position: relative;
+    overflow: hidden;
+}
+
+.subscribe-form input {
+    width: 100%;
+    padding: 14px 28px;
+    background: #2E2E2E;
+    border: 1px solid #2E2E2E;
+    color: #fff;
+}
+
+.subscribe-form button {
+    position: absolute;
+    right: 0;
+    background: #ff5e14;
+    padding: 13px 20px;
+    border: 1px solid #ff5e14;
+    top: 0;
+}
+
+.subscribe-form button i {
+    color: #fff;
+    font-size: 22px;
+    transform: rotate(-6deg);
+}
+
+.copyright-area {
+    background: #202020;
+    padding: 25px 0;
+}
+
+.copyright-text p {
+    margin: 0;
+    font-size: 14px;
+    color: #878787;
+}
+
+.copyright-text p a {
+    color: #ff5e14;
+}
+
+.footer-menu li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.footer-menu li:hover a {
+    color: #ff5e14;
+}
+
+.footer-menu li a {
+    font-size: 14px;
+    color: #878787;
+}
+
+
+/*
+la parte de la promocion
+*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;200&family=Noto+Sans+Osmanya&family=Rubik+Iso&display=swap');
+@import url('https://fonts.googleapis.com/css2? family= Noto+Sans+JP:wght@100;200 & family= Noto+Sans+Osmanya & family= Rubik+Iso & family= Zeyada & display=intercambio');
+
+
+
+
+
+h3 {
+    padding-top: 15px;
+    font-size: 50px;
+    font-family: 'Noto Sans JP', sans-serif;
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+    font-size: 2vw;
+    font-style: inherit;
+    font: bold;
+
+    /* font-family: 'Noto Sans Osmanya', sans-serif;
+   /* font-family: 'Rubik Iso', cursive;
+    font-family: 'Zeyada', cursive;*/
+}
+
+div {
+    border-color: #ff5722;
+    border-radius: 2px;
+}
+
+.columna {
+    display: flex;
+    flex-flow: wrap;
+
+    padding: 20px;
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.columna img {
+    width: 100%;
+    height: 200px;
+}
+
+.curso_columna {
+    /*idth: 100%;*/
+    padding: 20px 20px 20px 20px;
+
+}
+
+.container {
+    border: #202020 2px;
+    border-color: #3498db;
+}
+
+/*.secao_lista_filmes .container img {
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(to bottom, #ff5722 0%, #ff9800 100%);
+    position: relative;
+    border-radius: 20px;
+    animation: fire 4s infinite alternate;
+}*/
+
+.curso_columna img {
+    margin: 20px;
+    width: 95%;
+    height: 250px;
+}
+
+.carrucel {
+    width: fit-content;
+}
+
+.fire {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(to bottom, #ff5722 0%, #ff9800 100%);
+    position: relative;
+    border-radius: 20px;
+    animation: fire 4s infinite alternate;
+}
+
+@keyframes fire {
+    0% {
+        transform: translateY(0) rotate(0);
+        box-shadow: 0 0 1px 1px #ff5722, 0 0 10px 2px #ff5722, 0 0 20px 4px #ff5722, 0 0 40px 8px #ff9800;
+    }
+
+    100% {
+        transform: translateY(-10px) rotate(1deg);
+        box-shadow: 0 0 1px 2px #ff5722, 0 0 10px 4px #ff5722, 0 0 20px 8px #ff5722, 0 0 40px 16px #ff9800;
+    }
+}
+
+
+.texto-con-efecto {
+    position: relative;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.texto-con-efecto::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 3px;
+    background-color: #3498db;
+    /* Cambia este color al color que desees */
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.texto-con-efecto:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+
+/*modelo de caja
+margin y padding depende de quien lo va a mandar a llamar
+del padre al hijo=padding
+del hijo hacia a fuera es margen 
+
+el article necesita un espacio contra su contenido, se usa un padding
+left top rigth botton 
+---------------------------------------------------------|
+|  --------                                                       |
+|                                                         |
+|                                                         |
+|                                                         |
+|                                                         |
+|                                                         |
+|                                                         |
+|                                                         |
+|                                                         |
+|                                                         |
+|                                                         |
+|                                                         |
+|                                                         |
+|                                                         |
+|_________________________________________________________|
+
+*/
+@keyframes fuego {
+    0% {
+        background-color: #ff5722;
+        box-shadow: 0 0 5px 5px rgba(255, 87, 34, 0.7);
+    }
+
+    50% {
+        background-color: #ff9800;
+        box-shadow: 0 0 20px 20px rgba(255, 87, 34, 0.9);
+    }
+
+    100% {
+        background-color: #ff5722;
+        box-shadow: 0 0 5px 5px rgba(255, 34, 0.7);
+    }
+}
+
+
+
+
+.info_curso {
+    position: absolute;
+    color: aquamarine;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    text-align: center;
+    background-color: rgba(159, 20, 20, 0.5)
+}
+
+p {
+    font-size: smaller;
+}
