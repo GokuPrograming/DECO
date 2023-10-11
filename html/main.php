@@ -3,6 +3,7 @@
 include '../Controladores/crlMostrar.php';
 include '../Controladores/ctlFavoritos.php';
 include '../Controladores/ctlCarrito.php';
+
 ?>
 <!DOCTYPE html>
 <html lang="en" class="backblavk">
@@ -94,7 +95,7 @@ include '../Controladores/ctlCarrito.php';
                 <?php foreach ($cursos as $curso) : ?>
                     <li>
                         <figure>
-                            <img class="" src="../assets/img/<?php echo $curso['imagen']; ?>" width="100" alt="<?php echo $curso['titulo']; ?>">
+                            <img class="" src="../assets/img/<?php echo $curso['imagen']; ?>" width="50px" height="50px" alt="<?php echo $curso['titulo']; ?>">
 
                             <figcaption class=""><?php echo $curso['titulo']; ?></figcaption>
                             <figcaption class=""><?php echo $curso['id_lista_cursos']; ?></figcaption>
@@ -102,9 +103,9 @@ include '../Controladores/ctlCarrito.php';
                             <div>
                                 <form action="" method="post">
                                     <a href="../Controladores/ctlFavoritos.php?id=<?php echo $curso['id_lista_cursos']; ?>">Favoritos</a>
-                                    <a href="">carrito</a>
                                     <a href="../Controladores/ctlcompras.php?id=<?php echo $curso['id_lista_cursos']; ?>">Comprar</a>
-
+                                    <a href="../Controladores/ctlAgregarAcarrito.php?id=<?php echo $curso['id_lista_cursos']; ?>">agregar
+                                        a carrito</a>
                                 </form>
 
                             </div>
@@ -123,7 +124,7 @@ include '../Controladores/ctlCarrito.php';
                 <?php foreach ($cursos as $curso) : ?>
                     <li>
                         <figure>
-                            <img class="" src="../assets/img/<?php echo $curso['imagen']; ?>" width="100" alt="<?php echo $curso['titulo']; ?>">
+                            <img class="" src="../assets/img/<?php echo $curso['imagen']; ?>" width="50px" height="50px" alt="<?php echo $curso['titulo']; ?>">
 
                             <figcaption class=""><?php echo $curso['titulo']; ?></figcaption>
                             <figcaption class=""><?php echo $curso['id_lista_cursos']; ?></figcaption>
@@ -154,7 +155,7 @@ include '../Controladores/ctlCarrito.php';
                 <?php foreach ($cursos as $curso) : ?>
                     <li>
                         <figure>
-                            <img class="" src="../assets/img/<?php echo $curso['imagen']; ?>" width="100" alt="<?php echo $curso['titulo']; ?>">
+                            <img class="" src="../assets/img/<?php echo $curso['imagen']; ?>" width="50px" height="50px" alt="<?php echo $curso['titulo']; ?>">
 
                             <figcaption class=""><?php echo $curso['titulo']; ?></figcaption>
                             <figcaption class=""><?php echo $curso['id_lista_cursos']; ?></figcaption>
@@ -182,59 +183,23 @@ include '../Controladores/ctlCarrito.php';
                 <?php foreach ($usuariosCarrito as $curso) : ?>
                     <li>
                         <figure>
-                            <img class="" src="../assets/img/<?php echo $curso['imagen']; ?>" width="100" alt="<?php echo $curso['titulo']; ?>">
+                            <img class="" src="../assets/img/<?php echo $curso['imagen']; ?>" width="50px" height="50px" alt="<?php echo $curso['titulo']; ?>">
                             <figcaption class=""><?php echo $curso['titulo']; ?></figcaption>
                             <div>
                                 <form action="" method="post">
-                                    <button class="boton_favorito">Favorito</button>
-                                    <a href="../Controladores/ctlcompras.php?id=<?php echo $curso['id_lista_cursos']; ?>">Comprar</a>
+
+                                    <!--
+                                <a
+                                    href="../Controladores/ctlcompras.php?id=<?php echo $curso['id_lista_cursos']; ?>">Comprar</a>-->
                                 </form>
                             </div>
                         </figure>
                     </li>
                 <?php endforeach; ?>
             </ul>
+            <a href="carrito.php">ir a carrito</a>
         </div>
     </section>
-
-
-
-    <section class="secao_lista_filmes">
-        <div class="container">
-            <a href="../html/carrito.php">ir a carrito</a>
-            <?php include '../Controladores/ctlCarrito.php'; ?>
-            <h2>los del carrito</h2>
-            <ul class="em_alta">
-
-                <?php foreach ($cursos as $curso) : ?>
-                    <li>
-                        <figure>
-                            <img class="" src="../assets/img/<?php echo $curso['imagen']; ?>" width="100" alt="<?php echo $curso['titulo']; ?>">
-
-                            <figcaption class=""><?php echo $curso['titulo']; ?></figcaption>
-
-                            <div>
-                                <form action="" method="post">
-                                    <button class="boton_favorito">Favorito</button>
-                                    <a href="../Controladores/ctlcompras.php?id=<?php echo $curso['id_lista_cursos']; ?>">Comprar</a>
-
-                                </form>
-
-                            </div>
-                        </figure>
-                    </li>
-                <?php endforeach; ?>
-            </ul>
-        </div>
-    </section>
-
-
-
-
-
-
-
-
     <section class="secao_lista_filmes">
         <div class="container">
             <h2>CONTINUAR ASSISTINDO</h2>

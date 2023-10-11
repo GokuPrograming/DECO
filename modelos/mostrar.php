@@ -6,7 +6,7 @@ class mostrar{
     public function __construct() {
         $con = new Conexion();
         $this->db = $con->conectar();
-    }
+    } 
     public function mostrarCursos() {
       //  $query = "SELECT id_lista_cursos,titulo, imagen,precio FROM lista_curso";
       $query = "SELECT id_lista_cursos,titulo, imagen,precio FROM lista_curso";

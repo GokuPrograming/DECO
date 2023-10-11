@@ -1,5 +1,5 @@
 <?php
-
+///agrega los elementos a carrito 
 require_once '../modelos/mostrarFavoritos.php';
 require_once '../modelos/mostrar.php';
 require_once '../modelos/auth.php';

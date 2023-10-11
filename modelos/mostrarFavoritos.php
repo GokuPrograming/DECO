@@ -38,7 +38,7 @@ class favoritos{
     }
     
 
-
+ 
 
       public function mostrarCursosFav($user_id) {
         //  $query = "SELECT id_lista_cursos,titulo, imagen,precio FROM lista_curso";

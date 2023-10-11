@@ -1,6 +1,3 @@
-<?php 
-include '../Controladores/ctlCarrito.php';
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,12 +19,18 @@ include '../Controladores/ctlCarrito.php';
                         <div>
                             <form action="" method="post">
                                 <button class="boton_favorito">Favorito</button>
-                                <a href="../Controladores/ctlcompras.php?id=<?php echo $curso['id_lista_cursos']; ?>">Comprar</a>
+                                <a href="../Controladores\ComprasCarrito.php?id=<?php // echo $curso['id_lista_cursos']; 
+                                ?>">Comprar</a>
+                              
                             </form>
                         </div>
                     </figure>
                 </li>
-            <?php endforeach; ?>
+            <?php endforeach; 
+        
+          
+            ?>
+              <a href="../Controladores/ComprasCarrito.php">comprar</a>
         </ul>
     </div>
 </section>

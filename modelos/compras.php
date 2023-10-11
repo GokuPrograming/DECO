@@ -30,7 +30,8 @@ class compras{
             if ($rs->execute()) {
                 // La compra se ha registrado correctamente en la base de datos
                 echo "¡Compra registrada en la base de datos!";
-            } else {
+                
+            } else { 
                 // Hubo un error al registrar la compra
                 echo "Error al registrar la compra.";
             }
