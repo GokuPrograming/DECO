@@ -9,6 +9,7 @@ class compras{
 
   
     public function comprar($id_usuario, $cursoID) {
+
         // Verificar si el curso ya ha sido comprado por el usuario
         $query = "SELECT COUNT(*) FROM cursos_comprados WHERE id_usuario = :id_usuario AND id_lista_cursos = :id_curso";
         $stmt = $this->db->prepare($query);
@@ -30,6 +31,7 @@ class compras{
             if ($rs->execute()) {
                 // La compra se ha registrado correctamente en la base de datos
                 echo "¡Compra registrada en la base de datos!";
+                header("Location: ../html/compraConcluida.php");
                 
             } else { 
                 // Hubo un error al registrar la compra
@@ -39,5 +41,6 @@ class compras{
     }
     
 }
+
 
 ?>

@@ -13,7 +13,18 @@
     <!--texta alaig-->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $.ajax({
+                url: "experimentos/ContadorAJAX/conexion.php", // Ruta al archivo de servidor
+                type: "GET",
+                success: function(data) {
+                    $("#contador").text("Total: " + data); // Muestra el valor en la barra de navegación
+                }
+            });
+        });
+    </script>-->
 
 
     <!------ Include the above in your HEAD tag ---------->
@@ -26,7 +37,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
-    <title>Document</title>
+    <title>DECO</title>
 
 </head>
 
@@ -70,7 +81,7 @@
 
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="html/main.php"><img src="assets/img/opcion.png" alt="" height="30">
+                        <a class="nav-link" href="html/main"><img src="assets/img/opcion.png" alt="" height="30">
                             Acceso al main <span class="sr-only">(current)</span></a>
                     </li>
                 </ul>
@@ -81,7 +92,9 @@
                 <ul class="navbar-nav mr-auto">
                 </ul>
                 <ul class="navbar-nav mr-auto">
-
+                    
+                    <a id="contador" href="">contador</a>
+                    <!--<a href="experimentos/ContadorAJAX/contador.php">ContadorAJAX</a>-->
                 </ul>
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">

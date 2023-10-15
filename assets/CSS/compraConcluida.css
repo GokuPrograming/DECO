@@ -1,0 +1,218 @@
+@import url("//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css");
+@import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css");
+
+body {
+  background: #f7f7f7;
+  margin: 0 auto;
+  font-family: 'Lato', sans-serif;
+}
+
+.wrapper {
+  padding: 20px;
+  width: 25%;
+  height: auto;
+  margin: 0 auto;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(157,157,157,.13);
+  margin-top: 25px;
+  -webkit-animation: NAME-YOUR-ANIMATION 3s; /* Safari 4+ */
+
+}
+
+.content {
+  width: 100%;
+  height: 650px;
+  padding: 20px;
+  padding-top: 5em;
+  background: #f2f2f1;
+  display: inline-block;
+}
+
+.sub-wrapper {
+  padding: 20px;
+  width: 85%;
+  height: auto;
+  color: #fff;
+  /*padding: 60px 0px 50px 12%;*/
+  text-align: left;
+  font-size: 28px;
+  padding-left: 155px;
+  padding-top: 55px;
+}
+
+h2 {
+  text-align: center;
+  font-weight: 100;
+}
+
+.p-content {
+  padding: 10px 20px 10px 20px;
+  width: 400px;
+  height: 78px;
+  margin: 0 auto;
+  margin-top: -500px;
+  background: #fff;
+  box-shadow: 1px 2px 3px #ccc;
+}
+
+.p-content2 {
+  padding: 10px 20px 10px 20px;
+  width: 400px;
+  height: 78px;
+  margin: 0 auto;
+  margin-top: 10px;
+  background: #fff;
+  box-shadow: 1px 2px 3px #ccc;
+}
+
+
+.page-header {
+  width: 100%;
+  text-align: center;
+  font-weight: 300;
+  font-size: 35px;
+  -webkit-animation: NAME-YOUR-ANIMATION 3s; /* Safari 4+ */
+  -moz-animation:    NAME-YOUR-ANIMATION 2s; /* Mozila 4+ */
+  -o-animation:      NAME-YOUR-ANIMATION 2s; /* Opera 12+ */
+  animation:         NAME-YOUR-ANIMATION 2s; /* IE 10+ */
+  padding: 25px;
+}
+
+.navbar {
+  background: #1fa67a;
+  width: 100%;
+  height: 70px;
+}
+
+.sub-header {
+  background: #168c6c;
+  width: 100%;
+  height: 280px;
+  background: #168c6c url('https://comprarminecraft.com.br/img/icon/Steve2.png') -45% 55% no-repeat;
+  background-size: 40%;
+}
+
+.logo {
+  width: 60px;
+  height: 70px;
+  background: url('https://comprarminecraft.com.br/img/icon/poly-logo-cp.png') 25% 55%;
+  background-size: 100%;
+}
+
+.descricao {
+  font-size: 13px;
+  text-align: center;
+}
+
+.btn-back {
+  text-decoration: none;
+  text-align: none;
+  padding: 10px 10px 10px 10px;
+  font-size: 14px;
+  color: #fff;
+  background: #13765c;
+  border-radius: 5px;
+  transition: 200ms;
+  margin-top: 25px;
+  margin-left: 5px;
+}
+
+.btn-back:hover {
+  background: #1fa67a;
+  text-decoration: none;
+  color: #fff;
+}
+
+input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #f7f7f7;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 17px;
+  padding-left: 10px;
+  transition: 250ms ease-in;
+  margin-top: 10px;
+}
+
+input:focus {
+  /*box-shadow: 2px 2px 2px #ccc;*/
+  border-left: 2px solid #ccc;
+  outline: none;
+}
+
+.icon {
+  width: 10%; 
+  padding: 10px;
+}
+
+.glyphicon-ok {
+  color: #168c6c;
+  font-size: 20px;
+}
+
+.img1 {
+  width: 400px;
+  background: #f2f2f2;
+  display: inline-block;
+}
+
+/**
+===input buttons==
+**/
+
+input[type="submit"] {
+  background: #f2f2f2;
+  height: 50px;
+}
+
+.glyphicon-check {
+  color: #ccc;
+}
+
+/**
+//Login-form responsive
+**/
+
+@media (max-width: 1366px) {
+  
+}
+
+@media (max-width: 1024px) {
+  .login-form {
+    width: 80%;
+  }
+}
+
+@media (max-width: 1366px) {
+  .wrapper {
+    width: 50%;
+    padding: 4px 25px 38px 25px;
+  }
+}
+
+/**
+## Keyframes ##
+*
+
+@-webkit-keyframes NAME-YOUR-ANIMATION {
+  0%   { margin-top: -5%; opacity: 0.20; }
+  20%  { margin-top: -2%; opacity: 0.40; }
+  40%  { margin-bottom:  -5%;  opacity: 0.60; }
+  60%  { margin-top:  0%; }
+  80%  { margin-top:  0%; }
+  100% { margin-top:  0%; }
+}
+@-moz-keyframes NAME-YOUR-ANIMATION {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-o-keyframes NAME-YOUR-ANIMATION {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes NAME-YOUR-ANIMATION {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+*/

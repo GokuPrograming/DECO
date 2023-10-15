@@ -15,8 +15,10 @@ class login {
         $password = $_POST["password"];
 
         // Consulta a la base de datos
-        $query = $this->db->prepare("SELECT * FROM usuario WHERE correo = :correo");
+        $query = $this->db->prepare("SELECT * FROM usuario WHERE correo = :correo and password= :password");
         $query->bindParam(":correo", $correo);
+        $query->bindParam(":password", $password);
+        
         $query->execute();
 
         // Validación de los datos

@@ -129,7 +129,6 @@ svg {}
     to {
         -webkit-transform-origin: left bottom;
         transform-origin: left bottom;
-        transform: ;
         transform: translateX(850px) translateY(-83px) rotate3d(0, 0, 1, -60deg);
         opacity: 1;
     }

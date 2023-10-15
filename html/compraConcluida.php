@@ -4,6 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Gafata|Nobile:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../assets/CSS/footer.css">
+    <link rel="stylesheet" href="../assets/CSS/compraConcluida.css">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -11,59 +17,36 @@
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="../assets/CSS/footer.css">
-    <link rel="stylesheet" href="../assets/CSS/carrito.css">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script>
-    $(document).ready(function() {
-        $.ajax({
-            url: "../Controladores/ctrlTotalCarrito.php", // Ruta al archivo de servidor
-            type: "GET",
-            success: function(data) {
-                $("#pagar-value").text("" + data); // Muestra el valor en la barra de navegación
-            }
-        });
-    });
-    </script>
-    <title>Carrito</title>
 
+
+    <title>Compra Concluida</title>
 </head>
 
 <body>
-    <?php include '../Controladores/ctlCarrito.php'; ?>
-    <header class="cheader">
-        <h1>CARRITO <img src="../assets/img/carrito-de-compras.png" width="50px" height="auto"></h1>
-        <div><a href="../html/main.php"><img src="../assets/img/izquierda.png" alt="" width="50px" height="auto"></a>
-        </div>
-    </header>
-
-    <table class="container1">
-
-        <?php foreach ($usuariosCarrito as $curso) : ?>
-        <tr>
-            <td><img src="../assets/img/<?php echo $curso['imagen']; ?>" alt="<?php echo $curso['titulo']; ?>"></td>
-            <td>
-                <figcaption class="titulo"><?php echo $curso['titulo']; ?></figcaption>
-                <figcaption class="titulo"><img src="../assets/img/etiqueta-del-precio.png" width="25px" height="25px"
-                        alt=""><?php echo $curso['precio']; ?></figcaption>
-            </td>
-            <td>
-                <div><a class="quitar" style="text-decoration:none"
-                        href="../Controladores/ctrlBorrarCarrito.php?id=<?php echo $curso['id_lista_cursos']; ?> ">Quitar
-                        Elemento del Carrito</a></div>
-            </td>
-        </tr>
-        <?php endforeach; ?>
-    </table>
-    <div class="container1">
-        <p>TOTAL A PAGAR=<span id="pagar-value"></span></p>
-        <a class="Comprar" href="../Controladores/ComprasCarrito.php"><img src="../assets/img/tarjeta-de-debito.png"
-                alt=""> COMPRAR </a>
-
+    <div class="navbar">
+        <div class="logo"></div>
     </div>
-    </main>
+    <div class="sub-header">
+        <div class="sub-wrapper">
+            <h2>Compra <b>Concluída.</b>
+            </h2>
+            <a class="btn-back" href="main.php" text-align: center>Ir al menu</a>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="page-header">
+            Sucesso. Compra Concluída.<span class="glyphicon glyphicon-check"></span>
+        </div>
+
+        <!--header("Location: ../html/main.php");-->
+        <a href="main.php" class="btn-black">ir al main</a>
+    </div>
+
+
+
+
     <footer class="footer-section">
-        <div class="container1">
+        <div class="container">
             <div class="footer-cta pt-5 pb-5">
                 <div class="row">
                     <div class="col-xl-4 col-md-4 mb-30">
@@ -100,8 +83,7 @@
                     <div class="col-xl-4 col-lg-4 mb-50">
                         <div class="footer-widget">
                             <div class="footer-logo">
-                                <a href="../index.html"><img src="../assets/img/OIG.jpeg" class="img-fluid"
-                                        alt="logo"></a>
+                                <a href="../index.html"><img src="../assets/img/OIG.jpeg" class="img-fluid" alt="logo"></a>
                             </div>
                             <div class="footer-text">
                                 <p>"Empoderamos tu potencial a través del aprendizaje en línea, impulsando tu éxito y
@@ -111,12 +93,9 @@
                             </div>
                             <div class="footer-social-icon">
                                 <span>Follow us</span>
-                                <a href="#"><img src="../assets/img/facebook.png" alt="Logo" width="80" height="80"
-                                        class="d-inline-block align-top"></a>
-                                <a href="#"><img src="../assets/img/gorjeo.png" alt="Logo" width="80" height="80"
-                                        class="d-inline-block align-top"></a>
-                                <a href="#"><img src="../assets/img/instagram.png" alt="Logo" width="80" height="80"
-                                        class="d-inline-block align-top"></a>
+                                <a href="#"><img src="../assets/img/facebook.png" alt="Logo" width="80" height="80" class="d-inline-block align-top"></a>
+                                <a href="#"><img src="../assets/img/gorjeo.png" alt="Logo" width="80" height="80" class="d-inline-block align-top"></a>
+                                <a href="#"><img src="../assets/img/instagram.png" alt="Logo" width="80" height="80" class="d-inline-block align-top"></a>
                             </div>
                         </div>
                     </div>
@@ -159,12 +138,11 @@
             </div>
         </div>
         <div class="copyright-area">
-            <div class="container1">
+            <div class="container">
                 <div class="row">
                     <div class="col-xl-6 col-lg-6 text-center text-lg-left">
                         <div class="copyright-text">
-                            <p>Copyright &copy; 2018, All Right Reserved <a
-                                    href="https://codepen.io/anupkumar92/">Anup</a></p>
+                            <p>Copyright &copy; 2018, All Right Reserved <a href="https://codepen.io/anupkumar92/">Anup</a></p>
                         </div>
                     </div>
                     <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
@@ -182,9 +160,6 @@
             </div>
         </div>
     </footer>
-    <script>
-
-    </script>
 </body>
 
 </html>

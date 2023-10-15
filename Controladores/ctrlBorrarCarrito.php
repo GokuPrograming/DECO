@@ -16,6 +16,6 @@ $auth = new Auth();
         //mandamos llamar de la clse auth, lo que es el id
         $userID = $auth->getUserId();
         $carrito=new carrito();
-        $carrito->agregarCarrito($userID,$cursoID);
+        $carrito->eliminarProcductoDeCarrito($userID,$cursoID);
 }
 ?>

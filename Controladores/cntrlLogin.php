@@ -3,6 +3,7 @@ require('../modelos/login.php'); // Asegúrate de que login.php esté en la mism
 
 class llamarLogin {
     public function __construct() {
+        echo "hey";
         // Crea una instancia de la clase login
         $login = new login();
         // Llama al método login para iniciar sesión
@@ -12,4 +13,4 @@ class llamarLogin {
 
 // Crear una instancia de la clase OtraClase
 $otraClase = new llamarLogin();
-?> 
+?>
