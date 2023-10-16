@@ -78,7 +78,7 @@ class carrito
             return;
         }
 
-        // Conectar a la base de datos (debes ajustar esta parte según tu configuración)
+        
         foreach ($carritoCursos as $curso) {
             $cursoID = $curso['id_lista_cursos'];
             $query = "INSERT INTO cursos_comprados (id_usuario, id_lista_cursos) VALUES (:id_usuario, :id_curso)";

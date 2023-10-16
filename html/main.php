@@ -24,6 +24,12 @@ include '../Controladores/ctlCarrito.php';
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!--mostrar productos v2-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../assets/CSS/c2.css">
 
 
     <script>
@@ -79,7 +85,7 @@ include '../Controladores/ctlCarrito.php';
                         <!-- <a class="nav-link" href="carrito.php" id="contador"><img src="../assets/img/work-from-home.png" alt=""
                                 height="30">
                         </a>-->
-                        <a class="nav-link" href="carrito.php" id="contador">
+                        <a class="nav-link" href="carrito.php" id="contador">contador
                             <div class="carrito-container">
                                 <img src="../assets/img/carrito-de-compras.png" alt="" height="30">
                                 <!--el contador value se usa mas que nada el value para obtener los valores del id que se llama contador-->
@@ -114,14 +120,43 @@ include '../Controladores/ctlCarrito.php';
         </div>
     </section>
     <!-- //////////////////////////////////////// -->
-    <section class="secao_lista_filmes">
-        <div class="container">
-            <h2>CONTINUAR ASSISTINDO</h2>
-            <ul class="continuar_assistindo">
-
-            </ul>
+    </div>
+    <!--Mostrar Cosas nuevo item-->
+    <!-- Titulo -->
+    <h1 class='display-3 text-center titulo-sc p-3 p-md-5'>Todos los productos</h1>
+    <!-- Breadcrumb -->
+    <!-- Productos -->
+    <div class="container" id="app">
+        <div class="row align-items-start">
+            <?php foreach ($cursos as $curso) : ?>
+            <div class="col-6 col-md-4 col-lg-3 p-2 p-md-3 padre" v-for="(item, index) of productos">
+                <span class="link-tarjeta">
+                    <div class="curso-card">
+                        <!-- Nuevo div para aplicar la animación -->
+                        <img src="../assets/img/<?php echo $curso['imagen']; ?>" class="img opacity" width="25px"
+                            height="25px" alt="<?php echo $curso['titulo']; ?>" loading="lazy">
+                        <img src="../assets/img/<?php echo $curso['imagen']; ?>" class="img" loading="lazy">
+                        <div class="separador">
+                            <a class="Comprar"
+                                href="../Controladores/ctlFavoritos.php?id=<?php echo $curso['id_lista_cursos']; ?>"><img
+                                    src="../assets/img/favorito.png" width="25px" height="25px"> </a>
+                            <a class="Comprar"
+                                href="../Controladores/ctlcompras.php?id=<?php echo $curso['id_lista_cursos']; ?>"><img
+                                    src="../assets/img/etiqueta-del-precio.png" width="25px" height="25px"></a>
+                            <a class="Comprar"
+                                href="../Controladores/ctlAgregarAcarrito.php?id=<?php echo $curso['id_lista_cursos']; ?>"><img
+                                    src="../assets/img/carrito-de-compras.png" width="25px" height="25px"></a>
+                        </div>
+                        <p class="display-1 pt-2 nombre-pro"><?php echo $curso['titulo']; ?></p>
+                        <p class="cat-origen pb-1">Precio=<?php echo $curso['precio']; ?></p>
+                        <hr class="m-0 p-0">
+                    </div>
+                </span>
+            </div>
+            <?php endforeach; ?>
         </div>
-    </section>
+    </div>
+
 
     <!-- muestra de manera automatica todos los curosos para poderlos visualizar -->
     <section class="secao_lista_filmes">
@@ -202,7 +237,8 @@ include '../Controladores/ctlCarrito.php';
                 </td>
                 <td>
                     <figcaption class="titulo"><?php echo $cursoa['titulo']; ?></figcaption>
-                    <figcaption><?php //echo $curso['id_lista_cursos']; ?></figcaption>
+                    <figcaption><?php //echo $curso['id_lista_cursos']; 
+                                    ?></figcaption>
                     <!--  <figcaption class="titulo"><img src="../assets/img/etiqueta-del-precio.png" width="25px"
                             height="25px" alt=""><?php echo $cursoa['precio']; ?></figcaption>-->
                 </td>
