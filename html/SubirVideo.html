@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../assets/CSS/CRUD_video.css">
+    <title>Formulario de Registro de Video</title>
+</head>
+
+<body>
+    <h1>Registro de Video</h1>
+    <a href="../html/CrearCurso.php">Crear Cursos</a>
+    <form action="../Controladores/ctrlSubirVideo.php" method="post" enctype="multipart/form-data">
+        <label for="titulo">Título del video</label>
+        <input type="text" name="titulo" id="titulo" required>
+        <label for="descripcion">Descripción del video</label>
+        <input type="text" name="descripcion" id="descripcion" required>
+        <div class="drag-drop-area">
+            <p>Arrastra y suelta una imagen aquí o selecciona un archivo.</p>
+            <input type="file" name="foto" id="foto" required accept="image/*" multiple="false">
+        </div>
+        
+        <div class="drag-drop-area">
+            <p>Arrastra y suelta un video aquí o selecciona un archivo.</p>
+            <input type="file" name="video" id="video" required accept="video/*" multiple="false">
+        </div>
+        
+
+        <input type="submit" value="Guardar">
+    </form>
+
+    <script>
+        // Agregar eventos para el arrastre y soltar
+        const dragDropAreas = document.querySelectorAll('.drag-drop-area');
+
+        dragDropAreas.forEach((area) => {
+            area.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                area.classList.add('drag-over');
+            });
+
+            area.addEventListener('dragleave', () => {
+                area.classList.remove('drag-over');
+            });
+
+            area.addEventListener('drop', (e) => {
+                e.preventDefault();
+                area.classList.remove('drag-over');
+
+                const input = area.querySelector('input[type="file"]');
+                const files = e.dataTransfer.files;
+
+                if (files.length > 0) {
+                    input.files = files;
+                }
+            });
+
+            area.addEventListener('click', () => {
+                area.querySelector('input[type="file"]').click();
+            });
+        });
+    </script>
+</body>
+
+</html>

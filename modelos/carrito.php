@@ -149,12 +149,7 @@ class carrito
 
     public function Total_pagar($id_usuario)
     {
-        /* select  sum(lc.precio) as total
-from carrito c
-         join deco.usuario u on c.id_usuario = u.id_usuario
-         join deco.lista_curso lc on lc.id_lista_cursos = c.id_lista_cursos
-where c.id_usuario = 1
-order by 1;*/
+
         $query = "SELECT sum(lc.precio) as total
         from carrito c
                  join deco.usuario u on c.id_usuario = u.id_usuario

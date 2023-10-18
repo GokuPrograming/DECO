@@ -21,7 +21,7 @@ class mostrar{
         return $cursos; // Devuelve el array de cursos
     }
       
-    }
+    }   
 
 
 

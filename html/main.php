@@ -75,6 +75,7 @@ include '../Controladores/ctlCarrito.php';
                     <li class="nav-item">
                         <a class="nav-link" href="../html/p2.php"><img src="../assets/img/hombre.png" alt=""
                                 height="30"></a>
+                        <a href="SubirVideo.html">SUBIR VIDEOS</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="../html/configuracion.html"><img
