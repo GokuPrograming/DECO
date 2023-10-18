@@ -47,7 +47,7 @@ class favoritos
     {
         //  $query = "SELECT id_lista_cursos,titulo, imagen,precio FROM lista_curso";
         $query = "SELECT lc.titulo,lc.imagen,lc.id_lista_cursos from favorito f
-        join deco.lista_curso lc on f.id_lista_cursos = lc.id_lista_cursos where id_usuario=$user_id";
+        join deco.lista_curso lc on f.id_lista_cursos = lc.id_lista_cursos where f.id_usuario=$user_id";
         $stmt = $this->db->prepare($query);
         $stmt->execute();
 

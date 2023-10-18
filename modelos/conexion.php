@@ -18,3 +18,4 @@ class Conexion {
     }
 }
 
+//Te pasaste de verga ajajaj no le hubieras mostrado el tablero ajaajajaj.

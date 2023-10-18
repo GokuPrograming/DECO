@@ -29,7 +29,7 @@
 
 </head>
 
-<body>
+<body> 
     <?php include '../Controladores/ctlCarrito.php'; ?>
     <header class="cheader">
         <h1>CARRITO <img src="../assets/img/carrito-de-compras.png" width="50px" height="auto"></h1>

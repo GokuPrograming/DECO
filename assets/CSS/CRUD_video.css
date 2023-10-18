@@ -1,8 +1,17 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
+    background-color: #f5f5f5;
     margin: 0;
     padding: 0;
+}
+
+.container {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
 }
 
 h1 {
@@ -11,20 +20,33 @@ h1 {
     color: #fff;
     padding: 20px;
     margin: 0;
+    border-radius: 5px 5px 0 0;
 }
 
-form {
-    max-width: 400px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+.links {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+.links a:hover {
+    color: #555;
+}
+
+.form-group {
+    margin-top: 20px;
 }
 
 label {
     display: block;
-    margin-top: 10px;
     font-weight: bold;
+    color: #333;
 }
 
 input[type="text"],
@@ -41,6 +63,9 @@ input[type="file"] {
     border: 2px dashed #ccc;
     text-align: center;
     background-color: #f9f9f9;
+    cursor: pointer;
+    margin: 10px 0;
+    border-radius: 4px;
 }
 
 .drag-drop-area:hover {
@@ -49,6 +74,7 @@ input[type="file"] {
 
 .drag-drop-area p {
     margin: 0;
+    color: #666;
 }
 
 input[type="submit"] {

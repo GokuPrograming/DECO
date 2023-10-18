@@ -7,27 +7,34 @@
 </head>
 
 <body>
-    <h1>Registro de Video</h1>
-    <a href="../html/CrearCurso.php">Crear Cursos</a>
-    <form action="../Controladores/ctrlSubirVideo.php" method="post" enctype="multipart/form-data">
-        <label for="titulo">Título del video</label>
-        <input type="text" name="titulo" id="titulo" required>
-        <label for="descripcion">Descripción del video</label>
-        <input type="text" name="descripcion" id="descripcion" required>
-        <div class="drag-drop-area">
-            <p>Arrastra y suelta una imagen aquí o selecciona un archivo.</p>
-            <input type="file" name="foto" id="foto" required accept="image/*" multiple="false">
+    <div class="container">
+        <h1>Registro de Video</h1>
+        <div class="links">
+            <a href="../html/CrearCurso.php">Crear Cursos</a>
+            <a href="../html/modificarCurso.php">Modificar Curso</a>
         </div>
-        
-        <div class="drag-drop-area">
-            <p>Arrastra y suelta un video aquí o selecciona un archivo.</p>
-            <input type="file" name="video" id="video" required accept="video/*" multiple="false">
-        </div>
-        
-
-        <input type="submit" value="Guardar">
-    </form>
-
+        <form action="../Controladores/ctrlSubirVideo.php" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="titulo">Título del video</label>
+                <input type="text" name="titulo" id="titulo" required>
+            </div>
+            <div class="form-group">
+                <label for="descripcion">Descripción del video</label>
+                <input type="text" name="descripcion" id="descripcion" required>
+            </div>
+            <div class="drag-drop-area">
+                <p>Arrastra y suelta una imagen aquí o selecciona un archivo.Formato: Video, Peso máximo: 5MB</p>
+                <input type="file" name="foto" id="foto" required accept="image/*" multiple="false">
+            </div>
+            <div class="drag-drop-area">
+                <p>Arrastra y suelta un video aquí o selecciona un archivo.Formato: Video, Peso máximo: 50MB</p>
+                <input type="file" name="video" id="video" required accept="video/*" multiple="false">
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Guardar">
+            </div>
+        </form>
+    </div>
     <script>
         // Agregar eventos para el arrastre y soltar
         const dragDropAreas = document.querySelectorAll('.drag-drop-area');

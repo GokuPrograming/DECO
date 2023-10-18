@@ -1,7 +1,7 @@
 <?php
-include '../Controladores/ctlCreacionCurso.php';
-?>
-
+include '../Controladores/ctrlmostrarCategoria.php';
+include '../Controladores/ctrlMostrarVideos.php';
+?> 
 <!DOCTYPE html>
 <html>
 
@@ -10,59 +10,45 @@ include '../Controladores/ctlCreacionCurso.php';
 </head>
 
 <body>
-    <h1>Registro de Curso</h1>
-    <form action="procesar_registro_curso.php" method="post" enctype="multipart/form-data">
-        <label for="titulo">Título del Curso</label>
-        <input type="text" name="titulo" id="titulo" required>
+    <h1>crear Curso</h1>
+    <form action="../Controladores/ctlCreacionCurso.php" method="post" enctype="multipart/form-data">
+        <div>
+            <!-- <form action="../Controladores/ctrlSubirVideo.php" method="post" enctype="multipart/form-data">-->
+            <label for="titulo">Título del curso</label>
+            <input type="text" name="titulo" id="titulo" required>
 
-        <label for="imagen">Imagen del Curso</label>
-        <input type="file" name="imagen" id="imagen" required>
-
-        <label for="precio">Precio del Curso</label>
-        <input type="text" id="precio" required>
-
-        <label for="id_categoria">Categoría del Curso</label>
-        <select name="id_categoria" id="id_categoria" required>
-            <ul>
-                <?php require '../Controladores/ctlCreacionCurso.php'; ?>
-                <?php foreach ($categorias as $categoria) : ?>
-                <li><?php echo $categoria['categoria']; ?></li>
+            <div class="drag-drop-area">
+                <p>Arrastra y suelta una imagen aquí</p>
+                <input type="file" name="foto" id="foto" required accept="image/*" multiple="false">
+            </div>
+            <label for="videos">Selecciona un video:</label>
+            <select name="video" id="video">
+                <?php foreach ($video as $curso) : ?>
+                    <option value="<?php echo $curso['id_vuideo']; ?>"><?php echo $curso['video']; ?></option>
                 <?php endforeach; ?>
-            </ul>
-        </select>
+            </select>
+            <br><br>
+            <label for="titulo">Precio</label>
+            <input type="text" name="precio" id="precio" required>
+            <br><br>
 
-        <label for="id_video">ID del Video</label>
-        <select name="id_video" id="id_video" required>
-            <?php
-            $videos = $dbHandler->obtenerVideos();
-
-            foreach ($videos as $id => $nombre) {
-                echo '<option value="' . $id . '">' . $nombre . '</option>';
-            }
-            ?>
-        </select>
-
-        <input type="submit" value="Guardar">
-    </form>
-
-
-    <?php include '../Controladores/ctlCreacionCurso.php'; ?>
-    <section class="secao_lista_filmes">
-        <div class="container">
-            <h2>Comprados</h2>
-            <ul class="em_alta">
-
+            <label for="categorias">Selecciona una categoría:</label>
+            <select name="categoria" id="categoria">
                 <?php foreach ($categoria as $curso) : ?>
-                <li>
-                    <figure>
-                        <figcaption class=""><?php echo $curso['categoria']; ?></figcaption>
+                    <option value="<?php echo $curso['id_categoria']; ?>"><?php echo $curso['categoria']; ?></option>
+                <?php endforeach; ?>
+                <br><br>
+
         </div>
-        </figure>
-        </li>
-        <?php endforeach; ?>
-        </ul>
+        <div>
+            <!-- Agregar otros campos del formulario según tus necesidades -->
         </div>
-    </section>
+        <div>
+            <input type="submit" value="Registrar Curso">
+        </div>
+    </form>
 </body>
+
+</html>
 
 </html>

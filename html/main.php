@@ -75,7 +75,9 @@ include '../Controladores/ctlCarrito.php';
                     <li class="nav-item">
                         <a class="nav-link" href="../html/p2.php"><img src="../assets/img/hombre.png" alt=""
                                 height="30"></a>
-                        <a href="SubirVideo.html">SUBIR VIDEOS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a  class="nav-link" href="SubirVideo.html"><img src="../assets/img/subir.png" alt="subir" height="30px"></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="../html/configuracion.html"><img
@@ -86,7 +88,7 @@ include '../Controladores/ctlCarrito.php';
                         <!-- <a class="nav-link" href="carrito.php" id="contador"><img src="../assets/img/work-from-home.png" alt=""
                                 height="30">
                         </a>-->
-                        <a class="nav-link" href="carrito.php" id="contador">contador
+                        <a class="nav-link" href="carrito.php" id="contador">
                             <div class="carrito-container">
                                 <img src="../assets/img/carrito-de-compras.png" alt="" height="30">
                                 <!--el contador value se usa mas que nada el value para obtener los valores del id que se llama contador-->
@@ -230,35 +232,7 @@ include '../Controladores/ctlCarrito.php';
     </section>
     <section>
 
-        <table class="container1">
-            <?php include '../Controladores/ctlMostrarFav.php'; ?>
-            <?php foreach ($cursos as $cursoa) : ?>
-            <tr>
-                <td><img src="../assets/img/<?php echo $cursoa['imagen']; ?>" alt="<?php echo $cursoa['titulo']; ?>">
-                </td>
-                <td>
-                    <figcaption class="titulo"><?php echo $cursoa['titulo']; ?></figcaption>
-                    <figcaption><?php //echo $curso['id_lista_cursos']; 
-                                    ?></figcaption>
-                    <!--  <figcaption class="titulo"><img src="../assets/img/etiqueta-del-precio.png" width="25px"
-                            height="25px" alt=""><?php echo $cursoa['precio']; ?></figcaption>-->
-                </td>
-                <td>
-                    <div class=""><a class="quitar" style="text-decoration:none"
-                            href="../Controladores/CtlEliminarFavoritos.php?id=<?php echo $cursoa['id_lista_cursos']; ?>">Quitar
-                            De favoritos</a>
-                    </div>
-                </td>
-                <td>
-                    <div>
-                        <a class="Comprar" style="text-decoration:none"
-                            href="../Controladores/ctlcompras.php?id=<?php echo $cursoa['id_lista_cursos']; ?>">Comprar</a>
-                    </div>
-                </td>
-            </tr>
-            <?php endforeach; ?>
-        </table>
-    </section>
+
 
 
     <section class="secao_lista_filmes">
