@@ -25,7 +25,7 @@ if ($auth->isLoggedIn()) {
 
         // Realiza la inserción en la base de datos
       $cursoId = $crearCurso->Insert_listaCursos($titulo, $imagen, $video, $precio, $categoria,$userID);
-ECHO "titulo: ".$titulo."precio: ".$precio."idcategoria: ".$categoria."IDvIDEO: ".$video. "idUser= ".$userID;
+//ECHO "titulo: ".$titulo."precio: ".$precio."idcategoria: ".$categoria."IDvIDEO: ".$video. "idUser= ".$userID,$imagen;
     }
 }
 

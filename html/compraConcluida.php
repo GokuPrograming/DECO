@@ -35,7 +35,7 @@
     </div>
     <div class="wrapper">
         <div class="page-header">
-            Sucesso. Compra Concluída.<span class="glyphicon glyphicon-check"></span>
+            GRACIAS POR SU COMPRA<span class="glyphicon glyphicon-check"></span>
         </div>
 
         <!--header("Location: ../html/main.php");-->

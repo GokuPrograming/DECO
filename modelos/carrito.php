@@ -37,10 +37,10 @@ class carrito
         $existeCompra = $stmt->fetchColumn();
 
         if ($existeCompra > 0) {
-            echo "Este curso ya ha sido comprado, no se puede agregar al carrito.";
+            //echo "Este curso ya ha sido comprado, no se puede agregar al carrito.";
             
-           // header("Location: ../html/yaEsta/carritoYaEsta.php");
-
+          // header("Location: ../html/yaEsta/carritoYaEsta.php");
+          header("Location: ../html/main.php?YaEnCarro=1");
         } else {
             // Verificar si el curso ya está en la lista de carrito del usuario
             $query = "SELECT COUNT(*) FROM carrito WHERE id_usuario = :id_usuario AND id_lista_cursos = :id_curso";
@@ -52,7 +52,8 @@ class carrito
 
             if ($existeEnCarrito > 0) {
                 echo "Este curso ya está en tu lista de carrito";
-                header("Location: ../html/yaEsta/carritoYaEsta.php");
+                //header("Location: ../html/yaEsta/carritoYaEsta.php");
+                header("Location: ../html/main.php?yaestaEncarrito=1");
             } else {
                 $query = "INSERT INTO carrito (id_usuario, id_lista_cursos) VALUES (:id_usuario, :id_curso)";
                 $rs = $this->db->prepare($query);
@@ -60,7 +61,8 @@ class carrito
                 $rs->bindParam(':id_curso', $cursoID, PDO::PARAM_INT);
                 if ($rs->execute()) {
                     echo "¡Curso agregado a carrito!";
-                    header("Location: ../html/main.php");
+                    //header("Location: ../html/main.php");
+                    header("Location: ../html/main.php?insert=1");
                 } else {
                     echo "Error al agregar el curso a carrito";
                 }
@@ -74,8 +76,9 @@ class carrito
         // Verificar si hay cursos en el carrito
         $carritoCursos = $this->obtenerCursosCarrito($id_usuario); // Asegúrate de pasar el ID del usuario
         if (empty($carritoCursos)) {
-            echo "No hay cursos en el carrito. Agregue cursos antes de comprar.";
-            return;
+          //  echo "No hay cursos en el carrito. Agregue cursos antes de comprar.";
+          header("Location: ../html/carrito.php?CarritoVacio=1");  
+          return;
         }
 
         
@@ -90,6 +93,7 @@ class carrito
                 // La compra se ha registrado correctamente en la base de datos
                 echo "¡Compra registrada en la base de datos!";
                 header("Location: ../html/compraConcluida.php");
+               // header("Location: ../html/main.php?comprado=1");
                 $this->eliminarCarrito($id_usuario);
             } else {
                 // Hubo un error al registrar la compra
@@ -107,7 +111,8 @@ class carrito
         $rs->bindParam(':user_id', $id_usuario, PDO::PARAM_INT);
         if ($rs->execute()) {
             // Los cursos del carrito se han eliminado correctamente
-            echo "¡Cursos del carrito eliminados!";
+           // echo "¡Cursos del carrito eliminados!";
+          // header("Location: ../html/carrito.php?Quitar=1");
         } else {
             // Hubo un error al eliminar los cursos del carrito
             echo "Error al eliminar los cursos del carrito.";
@@ -124,7 +129,8 @@ class carrito
         $rs->bindParam(':id_curso', $cursoID, PDO::PARAM_INT);
         if ($rs->execute()) {
             // Los cursos del carrito se han eliminado correctamente
-            echo "¡Cursos de la lista eliminado";
+           // echo "¡Cursos de la lista eliminado";
+           header("Location: ../html/carrito.php?Quitar=1");
         } else {
             // Hubo un error al eliminar los cursos del carrito
             echo "Error al eliminar el curso";

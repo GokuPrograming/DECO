@@ -30,7 +30,9 @@ class AgregarVideo
         $sql = "INSERT INTO video (imagen, titulo, descripcion, video, id_usuario) VALUES ('$imagen', '$titulo', '$descripcion', '$video', $userID)";
 
         $conn->query($sql) === TRUE;
-        echo "Registro exitoso.";
+        //echo "Registro exitoso.";
+        //html\yaEsta\exito.php
+        header("Location: ../html/yaEsta/exito.php");
     }
 }
 

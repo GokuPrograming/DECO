@@ -29,8 +29,59 @@
 
 </head>
 
-<body> 
+<body>
     <?php include '../Controladores/ctlCarrito.php'; ?>
+
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <img src="../assets/img/OIG.jpeg" alt="Logo" width="80" height="80"
+                class="d-inline-block align-top imagen-redondeada">
+            <a class="navbar-brand" href="#"><img height="100" src="/HTML/Carpeta2/assets/imagenes/logo.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="main.php"><img src="../assets/img/work-from-home.png" alt="" height="30">
+                            Inicio <span class="sr-only">(current)</span></a>
+                    </li>
+
+                </ul>
+
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../html/p2.php"><img src="../assets/img/hombre.png" alt=""
+                                height="30"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="SubirVideo.html"><img src="../assets/img/subir.png" alt="subir"
+                                height="30px"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../html/configuracion.html"><img
+                                src="../assets/img/configuraciones.png" alt="" height="30"></a>
+                    </li>
+                    <li class="nav-item">
+
+                        <!-- <a class="nav-link" href="carrito.php" id="contador"><img src="../assets/img/work-from-home.png" alt=""
+                                height="30">
+                        </a>-->
+
+                    </li>
+
+                    <li class="nav-item active">
+
+                        <a class="nav-link" href="../Controladores/ctrlCerrarSesion.php"><img
+                                src="../assets/img/flecha.png" alt="" height="30">
+                            cerraar sesion <span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
     <header class="cheader">
         <h1>CARRITO <img src="../assets/img/carrito-de-compras.png" width="50px" height="auto"></h1>
         <div><a href="../html/main.php"><img src="../assets/img/izquierda.png" alt="" width="50px" height="auto"></a>
@@ -183,7 +234,22 @@
         </div>
     </footer>
     <script>
+    // Verificar si hay un parámetro 'success' en la URL
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has('CarritoVacio')) {
+        // Mostrar una alerta
+        alert("No hay cursos en el carrito. Agregue cursos antes de comprar");
 
+        // Redirigir al usuario después de mostrar la alerta
+        window.location.href = "main.php"; // Cambiar 'nueva-pagina.html' a tu URL de destino
+    }
+    if (urlParams.has('Quitar')) {
+        // Mostrar una alerta
+        alert("¡Curso del carrito eliminado!");
+
+        // Redirigir al usuario después de mostrar la alerta
+        window.location.href = "carrito.php"; // Cambiar 'nueva-pagina.html' a tu URL de destino
+    }
     </script>
 </body>
 

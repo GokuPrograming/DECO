@@ -17,6 +17,9 @@ include '../Controladores/ctlCarrito.php';
     <link rel="stylesheet" href="../assets/CSS/main.css">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!--texta alaig-->
@@ -77,7 +80,8 @@ include '../Controladores/ctlCarrito.php';
                                 height="30"></a>
                     </li>
                     <li class="nav-item">
-                        <a  class="nav-link" href="SubirVideo.html"><img src="../assets/img/subir.png" alt="subir" height="30px"></a>
+                        <a class="nav-link" href="SubirVideo.html"><img src="../assets/img/subir.png" alt="subir"
+                                height="30px"></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="../html/configuracion.html"><img
@@ -169,7 +173,7 @@ include '../Controladores/ctlCarrito.php';
                 <?php foreach ($cursos as $curso) : ?>
                 <li>
                     <figure>
-                        <img class="" src="../assets/img/<?php echo $curso['imagen']; ?>" width="50px" height="50px"
+                        <img class="" src="../assets/img/<?php echo $curso['imagen']; ?>" width="75px" height="50px"
                             alt="<?php echo $curso['titulo']; ?>">
 
                         <div class="curso-container">
@@ -235,219 +239,245 @@ include '../Controladores/ctlCarrito.php';
 
 
 
-    <section class="secao_lista_filmes">
-        <?php include '../Controladores/ctlMostrarFav.php'; ?>
-        <div class="container">
-            <h2>Los favoritos</h2>
-            <ul class="em_alta">
-                <?php $first = true; // Variable para rastrear el primer elemento 
-                ?>
-                <?php foreach ($cursos as $curso) : ?>
-                <li>
-                    <figure>
-                        <img class="" src="../assets/img/<?php echo $curso['imagen']; ?>" width="50px" height="50px"
-                            alt="<?php echo $curso['titulo']; ?>">
-                        <figcaption><?php echo $curso['titulo']; ?></figcaption>
-                        <figcaption><?php echo $curso['id_lista_cursos']; ?></figcaption>
-                        <div>
-                            <a
-                                href="../Controladores/ctlcompras.php?id=<?php echo $curso['id_lista_cursos']; ?>">Comprar</a>
-                            <a
-                                href="../Controladores/CtlEliminarFavoritos.php?id=<?php echo $curso['id_lista_cursos']; ?>">Eliminar
-                                de la lista de Favoritos</a>
-                        </div>
-                    </figure>
-                </li>
-                <?php endforeach; ?>
-            </ul>
-        </div>
-    </section>
-
-
-    <?php include '../Controladores/ctlCarrito.php'; ?>
-
-    <section class="secao_lista_filmes">
-        <div class="container">
-
-            <h2>Los del carrito</h2>
-            <ul class="em_alta">
-                <?php foreach ($usuariosCarrito as $curso) : ?>
-                <li>
-                    <figure>
-                        <img class="" src="../assets/img/<?php echo $curso['imagen']; ?>" width="50px" height="50px"
-                            alt="<?php echo $curso['titulo']; ?>">
-                        <figcaption><?php echo $curso['titulo']; ?></figcaption>
-                    </figure>
-                </li>
-                <?php endforeach; ?>
-            </ul>
-            <a href="carrito.php">Ir a carrito</a>
-        </div>
-    </section>
-
-
-
-
-    <section class="secao_lista_filmes">
-        <div class="container">
-            <h2>CONTINUAR ASSISTINDO</h2>
-            <ul class="continuar_assistindo nav-item active">
-                <li>
-                    <figure>
-                        <img src="https://i.postimg.cc/NF88YGfn/THE-WITCHER.png" alt="THE WITCHER">
-                        <figcaption>Filme 1</figcaption>
-                    </figure>
-                </li>
-                <li class="nav-item active">
-                    <figure>
-                        <img src="https://i.postimg.cc/bJ9dwZk1/THE-WALKING-DEAD.png" alt="THE WALKING DEAD">
-                        <figcaption>Filme 2</figcaption>
-                    </figure>
-                </li>
-                <li>
-                    <figure>
-                        <img src="https://i.postimg.cc/PxXTK2v8/O-RESGATE-DO-SOLDADO-RYAN.png"
-                            alt="O RESGATE DO SOLDADO RYAN">
-                        <figcaption>Filme 3</figcaption>
-                    </figure>
-                </li>
-                <li>
-                    <figure>
-                        <img src="https://i.postimg.cc/J7JCJf2d/DAWSON-S-CREEK.png" alt="DAWSON'S CREEK">
-                        <figcaption>Filme 4</figcaption>
-                    </figure>
-                </li>
-            </ul>
-        </div>
-    </section>
-    <!--  -->
-
-    <br>
-
-    <footer class="footer-section">
-        <div class="container">
-            <div class="footer-cta pt-5 pb-5">
-                <div class="row">
-                    <div class="col-xl-4 col-md-4 mb-30">
-                        <div class="single-cta">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div class="cta-text">
-                                <h4>UBICACION</h4>
-                                <span>Avenida Tecnologico</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-md-4 mb-30">
-                        <div class="single-cta">
-                            <i class="fas fa-phone"></i>
-                            <div class="cta-text">
-                                <h4>Contactanos</h4>
-                                <span>+52 4111549487</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-md-4 mb-30">
-                        <div class="single-cta">
-                            <i class="far fa-envelope-open"></i>
-                            <div class="cta-text">
-                                <h4>Correo</h4>
-                                <span>deco.tecno@itcelaya.edu.mx</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-content pt-5 pb-5">
-                <div class="row">
-                    <div class="col-xl-4 col-lg-4 mb-50">
-                        <div class="footer-widget">
-                            <div class="footer-logo">
-                                <a href="index.html"><img src="../assets/img/OIG.jpeg" class="img-fluid" alt="logo"></a>
-                            </div>
-                            <div class="footer-text">
-                                <p>"Empoderamos tu potencial a través del aprendizaje en línea, impulsando tu éxito
-                                    y
-                                    transformando tu futuro, porque el conocimiento no tiene límites ni fronteras.
-                                    Únete
-                                    a nuestra comunidad de estudiantes y descubre un mundo de posibilidades
-                                    educativas
-                                    desde la comodidad de tu hogar."</p>
-                            </div>
-                            <div class="footer-social-icon">
-                                <span>Follow us</span>
-                                <a href="#"><img src="../assets/img/facebook.png" alt="Logo" width="80" height="80"
-                                        class="d-inline-block align-top"></a>
-                                <a href="#"><img src="../assets/img/gorjeo.png" alt="Logo" width="80" height="80"
-                                        class="d-inline-block align-top"></a>
-                                <a href="#"><img src="../assets/img/instagram.png" alt="Logo" width="80" height="80"
-                                        class="d-inline-block align-top"></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
-                        <div class="footer-widget">
-                            <div class="footer-widget-heading">
-                                <h3>Useful Links</h3>
-                            </div>
-                            <ul>
-                                <li><a href="/index.html">Home</a></li>
-                                <li><a href="#">about</a></li>
-                                <li><a href="#">services</a></li>
-                                <li><a href="#">portfolio</a></li>
-                                <li><a href="#">Contact</a></li>
-                                <li><a href="#">About us</a></li>
-                                <li><a href="#">Our Services</a></li>
-                                <li><a href="#">Expert Team</a></li>
-                                <li><a href="#">Contact us</a></li>
-                                <li><a href="#">Latest News</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
-                        <div class="footer-widget">
-                            <div class="footer-widget-heading">
-                                <h3>SIGUENOS</h3>
-                            </div>
-                            <div class="footer-text mb-25">
-                                <p>No olvides que este es tu santuario de conocimiento y siempre serás bienvenido
-                                </p>
-                            </div>
-                            <div class="subscribe-form">
-                                <form action="#">
-                                    <input type="text" placeholder="Email Address">
-                                    <button><i class="fab fa-telegram-plane"></i></button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="copyright-area">
+        <section class="secao_lista_filmes">
+            <?php include '../Controladores/ctlMostrarFav.php'; ?>
             <div class="container">
-                <div class="row">
-                    <div class="col-xl-6 col-lg-6 text-center text-lg-left">
-                        <div class="copyright-text">
-                            <p>Copyright &copy; 2018, All Right Reserved <a
-                                    href="https://codepen.io/anupkumar92/">Anup</a></p>
+                <h2>Los favoritos</h2>
+                <ul class="em_alta">
+                    <?php $first = true; // Variable para rastrear el primer elemento 
+                ?>
+                    <?php foreach ($cursos as $curso) : ?>
+                    <li>
+                        <figure>
+                            <img class="" src="../assets/img/<?php echo $curso['imagen']; ?>" width="50px" height="50px"
+                                alt="<?php echo $curso['titulo']; ?>">
+                            <figcaption><?php echo $curso['titulo']; ?></figcaption>
+                            <figcaption><?php echo $curso['id_lista_cursos']; ?></figcaption>
+                            <div>
+                                <a
+                                    href="../Controladores/ctlcompras.php?id=<?php echo $curso['id_lista_cursos']; ?>">Comprar</a>
+                                <a
+                                    href="../Controladores/CtlEliminarFavoritos.php?id=<?php echo $curso['id_lista_cursos']; ?>">Eliminar
+                                    de la lista de Favoritos</a>
+                            </div>
+                        </figure>
+                    </li>
+                    <?php endforeach; ?>
+                </ul>
+            </div>
+        </section>
+
+
+        <?php include '../Controladores/ctlCarrito.php'; ?>
+
+        <section class="secao_lista_filmes">
+            <div class="container">
+
+                <h2>Los del carrito</h2>
+                <ul class="em_alta">
+                    <?php foreach ($usuariosCarrito as $curso) : ?>
+                    <li>
+                        <figure>
+                            <img class="" src="../assets/img/<?php echo $curso['imagen']; ?>" width="50px" height="50px"
+                                alt="<?php echo $curso['titulo']; ?>">
+                            <figcaption><?php echo $curso['titulo']; ?></figcaption>
+                        </figure>
+                    </li>
+                    <?php endforeach; ?>
+                </ul>
+                <a href="carrito.php">Ir a carrito</a>
+            </div>
+        </section>
+
+
+
+
+        <section class="secao_lista_filmes">
+            <div class="container">
+                <h2>CONTINUAR ASSISTINDO</h2>
+                <ul class="continuar_assistindo nav-item active">
+                    <li>
+                        <figure>
+                            <img src="https://i.postimg.cc/NF88YGfn/THE-WITCHER.png" alt="THE WITCHER">
+                            <figcaption>Filme 1</figcaption>
+                        </figure>
+                    </li>
+                    <li class="nav-item active">
+                        <figure>
+                            <img src="https://i.postimg.cc/bJ9dwZk1/THE-WALKING-DEAD.png" alt="THE WALKING DEAD">
+                            <figcaption>Filme 2</figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure>
+                            <img src="https://i.postimg.cc/PxXTK2v8/O-RESGATE-DO-SOLDADO-RYAN.png"
+                                alt="O RESGATE DO SOLDADO RYAN">
+                            <figcaption>Filme 3</figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure>
+                            <img src="https://i.postimg.cc/J7JCJf2d/DAWSON-S-CREEK.png" alt="DAWSON'S CREEK">
+                            <figcaption>Filme 4</figcaption>
+                        </figure>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!--  -->
+
+        <br>
+
+        <footer class="footer-section">
+            <div class="container">
+                <div class="footer-cta pt-5 pb-5">
+                    <div class="row">
+                        <div class="col-xl-4 col-md-4 mb-30">
+                            <div class="single-cta">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div class="cta-text">
+                                    <h4>UBICACION</h4>
+                                    <span>Avenida Tecnologico</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-4 mb-30">
+                            <div class="single-cta">
+                                <i class="fas fa-phone"></i>
+                                <div class="cta-text">
+                                    <h4>Contactanos</h4>
+                                    <span>+52 4111549487</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-4 mb-30">
+                            <div class="single-cta">
+                                <i class="far fa-envelope-open"></i>
+                                <div class="cta-text">
+                                    <h4>Correo</h4>
+                                    <span>deco.tecno@itcelaya.edu.mx</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
-                        <div class="footer-menu">
-                            <ul>
-                                <li><a href="../index.html">Home</a></li>
-                                <li><a href="#">Terms</a></li>
-                                <li><a href="#">Privacy</a></li>
-                                <li><a href="#">Policy</a></li>
-                                <li><a href="#">Contact</a></li>
-                            </ul>
+                </div>
+                <div class="footer-content pt-5 pb-5">
+                    <div class="row">
+                        <div class="col-xl-4 col-lg-4 mb-50">
+                            <div class="footer-widget">
+                                <div class="footer-logo">
+                                    <a href="index.html"><img src="../assets/img/OIG.jpeg" class="img-fluid"
+                                            alt="logo"></a>
+                                </div>
+                                <div class="footer-text">
+                                    <p>"Empoderamos tu potencial a través del aprendizaje en línea, impulsando tu éxito
+                                        y
+                                        transformando tu futuro, porque el conocimiento no tiene límites ni fronteras.
+                                        Únete
+                                        a nuestra comunidad de estudiantes y descubre un mundo de posibilidades
+                                        educativas
+                                        desde la comodidad de tu hogar."</p>
+                                </div>
+                                <div class="footer-social-icon">
+                                    <span>Follow us</span>
+                                    <a href="#"><img src="../assets/img/facebook.png" alt="Logo" width="80" height="80"
+                                            class="d-inline-block align-top"></a>
+                                    <a href="#"><img src="../assets/img/gorjeo.png" alt="Logo" width="80" height="80"
+                                            class="d-inline-block align-top"></a>
+                                    <a href="#"><img src="../assets/img/instagram.png" alt="Logo" width="80" height="80"
+                                            class="d-inline-block align-top"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                            <div class="footer-widget">
+                                <div class="footer-widget-heading">
+                                    <h3>Useful Links</h3>
+                                </div>
+                                <ul>
+                                    <li><a href="/index.html">Home</a></li>
+                                    <li><a href="#">about</a></li>
+                                    <li><a href="#">services</a></li>
+                                    <li><a href="#">portfolio</a></li>
+                                    <li><a href="#">Contact</a></li>
+                                    <li><a href="#">About us</a></li>
+                                    <li><a href="#">Our Services</a></li>
+                                    <li><a href="#">Expert Team</a></li>
+                                    <li><a href="#">Contact us</a></li>
+                                    <li><a href="#">Latest News</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                            <div class="footer-widget">
+                                <div class="footer-widget-heading">
+                                    <h3>SIGUENOS</h3>
+                                </div>
+                                <div class="footer-text mb-25">
+                                    <p>No olvides que este es tu santuario de conocimiento y siempre serás bienvenido
+                                    </p>
+                                </div>
+                                <div class="subscribe-form">
+                                    <form action="#">
+                                        <input type="text" placeholder="Email Address">
+                                        <button><i class="fab fa-telegram-plane"></i></button>
+                                    </form>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </footer>
+            <div class="copyright-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                            <div class="copyright-text">
+                                <p>Copyright &copy; 2018, All Right Reserved <a
+                                        href="https://codepen.io/anupkumar92/">Anup</a></p>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+                            <div class="footer-menu">
+                                <ul>
+                                    <li><a href="../index.html">Home</a></li>
+                                    <li><a href="#">Terms</a></li>
+                                    <li><a href="#">Privacy</a></li>
+                                    <li><a href="#">Policy</a></li>
+                                    <li><a href="#">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script>
+        // Verificar si hay un parámetro 'success' en la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.has('YaEnCarro')) {
+            // Mostrar una alerta
+            alert("ya se ah comrado, no lo puedes agregar al carrito");
 
+            // Redirigir al usuario después de mostrar la alerta
+            window.location.href = "main.php"; // Cambiar 'nueva-pagina.html' a tu URL de destino
+        } else if (urlParams.has('insert')) {
+            alert("agregado a carro");
+            window.location.href = "main.php";
+        } else if (urlParams.has('comprado')) {
+            alert("Curso Comprado");
+            window.location.href = "main.php";
+        } else if (urlParams.has('yaestaEnFavoritos')) {
+            alert("YA ESTA EN FAVORITOS");
+            window.location.href = "main.php";
+        } else if (urlParams.has('yaestaEncarrito')) {
+            alert("Este curso ya está en tu lista de carrito");
+            window.location.href = "main.php";
+        }else if (urlParams.has('agregadoAfavoritos')) {
+            alert("Se agrego a favoritos Con exito");
+            window.location.href = "main.php";
+        }
+        </script>
 
 </body>
 

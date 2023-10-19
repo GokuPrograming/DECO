@@ -22,7 +22,8 @@ class favoritos
 
         if ($existeEnFavoritos > 0) {
             // El curso ya está en la lista de favoritos del usuario
-            echo "Este curso ya está en tu lista de favoritos.";
+            //echo "Este curso ya está en tu lista de favoritos.";
+            header("Location: ../html/main.php?yaestaEnFavoritos=1");
         } else {
             // El curso no está en la lista de favoritos, se puede agregar
             $query = "INSERT INTO favorito (id_usuario, id_lista_cursos) VALUES (:id_usuario, :id_curso)";
@@ -32,7 +33,7 @@ class favoritos
 
             if ($rs->execute()) {
                 // El curso se ha agregado a la lista de favoritos correctamente
-                echo "¡Curso agregado a la lista de favoritos!";
+                header("Location: ../html/main.php?agregadoAfavoritos=1");
             } else {
                 // Hubo un error al agregar el curso a la lista de favoritos
                 echo "Error al agregar el curso a la lista de favoritos.";

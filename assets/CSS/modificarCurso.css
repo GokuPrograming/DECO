@@ -102,4 +102,61 @@ a.Comprar:hover {
     transform: scale(1.05) rotate(5deg); /* Aumenta ligeramente el tamaño y aplica un giro */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Agrega una sombra sutil */
   }
-  
+  /* Estilo para la tabla */
+.container1 {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* Estilo para las filas de la tabla */
+.container1 tr {
+    border-bottom: 1px solid #ccc;
+}
+
+/* Estilo para las celdas de la tabla */
+.container1 td {
+    padding: 10px;
+}
+
+/* Estilo para las imágenes de los cursos */
+.imagen-curso {
+    width: 100px;
+    height: auto;
+}
+
+/* Estilo para las figcaptions */
+.id {
+    font-weight: bold;
+    font-size: 18px;
+    color: #007BFF;
+}
+
+.titulo {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+/* Estilo para el botón "ACTUALIZAR" */
+input[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* Estilo para el botón "ACTUALIZAR" al pasar el ratón */
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo para el enlace "ACTUALIZAR VALORES" */
+.Comprar {
+    text-decoration: none;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 5
+}
